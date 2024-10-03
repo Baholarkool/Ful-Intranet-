@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Trebuchet MS';
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #b9860f;
+    padding: 0 50px;
+}
+
+header .logo{
+    padding: 5px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    list-style: none;
+}
+
+.social-icons li {
+    margin: 0 40px;
+}
+
+.social-icons li a {
+    font-family:'Trebuchet MS';
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: rgb(29, 29, 29);
+    transition: 0.6s ease-in-out;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #996f0c;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    padding: 5px 50px;
+    z-index: 1000; 
+}
+
+#navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 50px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 350px 100px;
+    background: url('images/fulafia2.jpg') no-repeat center center/cover;
+}
+
+.hero-text h2 {
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+.hero-text h3 {
+    font-size: 60px;
+    color: white;
+    font-weight: bold;
+}
+.hero-text h3 span{
+    color: #c59217;
+}
+
+.hero-text p {
+    margin-top: px;
+    max-width: 600px;
+    color: white;
+}
+
+.apply-section {
+    background-color: rgba(255, 255, 255, 0.164);
+    padding: 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.apply-section h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.button-group a {
+    display: block;
+    background-color: #fff;
+    color: #000;
+    padding: 15px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    transform: scale(1);
+}
+
+.button-group a:hover {
+    background-color: #b9860f;
+    color: white;
+    transform: scale(1.1);
+}
+
+
+footer {
+    background-color: #141414;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin: 20px;
+    text-align: left;
+}
+
+.footer-section h3, .footer-section h4 {
+    margin-bottom: 15px;
+    color: #c59217;
+    text-align: left;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    font-size: 12px;
+}
+
+
+@media (max-width: 768px) {
+
+    
+    .hero-text h2 {
+        font-size: 60px;
+    }
+
+    .hero-text h3 {
+        font-size: 40px; 
+    }
+
+    .hero-text p {
+        font-size: 16px; 
+        max-width: 100%; 
+    }
+
+    
+    .button-group {
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+    }
+
+    .button-group a {
+        font-size: 14px; 
+        padding: 12px 100px; 
+    }
+
+    
+    .social-icons {
+        display: none;
+    }
+
+    
+    .hero {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 200px 10px 1000px ; 
+    }
+
+  
+    .footer-content {
+        flex-direction: column; 
+        text-align: center; 
+        padding: 0 0;
+    }
+
+    
+}
+
+
+
+@media (max-width: 480px) {
+
+    
+    .hero-text h2 {
+        font-size: 50px;
+    }
+
+    .hero-text h3 {
+        font-size: 30px;
+    }
+
+    .hero-text p {
+        font-size: 14px; 
+    }
+
+    
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+
+    .button-group a {
+        font-size: 12px;
+        padding: 5px 50px; 
+    }
+
+    
+    .social-icons {
+        display: none; 
+    }
+
+   
+    .hero {
+        padding: 15px;
+        text-align: center;
+        flex-direction: column; 
+        text-align: center; 
+        padding: 100px 10px 800px ; 
+    }
+
+  
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 0;
+    }
+    
+}
